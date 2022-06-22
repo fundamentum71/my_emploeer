@@ -4,7 +4,8 @@ import './emploees-list.css';
 
 const EmploeesList = ({ data }) => {
 	const elements = data.map((item) => {
-		return <EmploeesListItem {...item} />;
+		const { id, ...itemPtops } = item;
+		return <EmploeesListItem key={id} {...itemPtops} />;
 	});
 	return <ul className="app-list list-group">{elements}</ul>;
 };
