@@ -8,7 +8,7 @@ import './app.css';
 
 function App() {
 	const data = [
-		{ name: 'John C.', salary: 800, increase: false, id: 1 },
+		{ name: 'John C.', salary: 800, increase: true, id: 1 },
 		{ name: 'Alex M.', salary: 3000, increase: false, id: 2 },
 		{ name: 'Carl W.', salary: 5000, increase: false, id: 3 },
 	];
