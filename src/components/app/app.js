@@ -12,9 +12,9 @@ class App extends Component {
 		super(props);
 		this.state = {
 			data: [
-				{ name: 'John C.', salary: 800, increase: false, id: 1 },
-				{ name: 'Alex M.', salary: 3000, increase: false, id: 2 },
-				{ name: 'Carl W.', salary: 5000, increase: false, id: 3 },
+				{ name: 'John C.', salary: 800, increase: false, rise: true, id: 1 },
+				{ name: 'Alex M.', salary: 3000, increase: true, rise: false, id: 2 },
+				{ name: 'Carl W.', salary: 5000, increase: false, rise: false, id: 3 },
 			],
 		};
 		this.maxId = 4;
@@ -22,8 +22,6 @@ class App extends Component {
 
 	deleteItem = (id) => {
 		this.setState(({ data }) => {
-			//const index = data.findIndex((elem) => elem.id === id);
-
 			return {
 				data: data.filter((item) => item.id !== id),
 			};
@@ -34,6 +32,7 @@ class App extends Component {
 		const newItem = {
 			name,
 			salary,
+			rise: false,
 			increase: false,
 			id: this.maxId++,
 		};
@@ -44,6 +43,29 @@ class App extends Component {
 				data: newArr,
 			};
 		});
+	};
+
+	onToggleIncrease = (id) => {
+		this.setState(({ data }) => {
+			const index = data.findIndex((elem) => elem.id === id);
+
+			const old = data[index];
+			const newItem = { ...old, increase: !old.increase };
+			const newArr = [
+				...data.slice(0, index),
+				newItem,
+				...data.slice(index + 1),
+			];
+
+			return {
+				data: newArr,
+			};
+			//!15:43
+		});
+	};
+
+	onToggleRise = (id) => {
+		console.log(`Rise this ${id}`);
 	};
 
 	render() {
@@ -57,6 +79,8 @@ class App extends Component {
 				<EmploeesList
 					data={this.state.data}
 					onDelete={(id) => this.deleteItem(id)}
+					onToggleIncrease={this.onToggleIncrease}
+					onToggleRise={this.onToggleRise}
 				/>
 				<EmploeesAddForm onAdd={this.addItem} />
 			</div>
