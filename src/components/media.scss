@@ -1,12 +1,91 @@
 @media (max-width: 1200px) {
 	.app {
-		//margin: 0 auto;
 		//max-width: 300px;
 	}
 }
 @media (max-width: 990px) {
+	.list-group-item span {
+		min-width: 380px;
+	}
+	.list-group-item input {
+		max-width: 95px;
+	}
+	.app {
+		margin: 0 auto;
+		max-width: 730px;
+	}
 }
 @media (max-width: 767px) {
+	.list-group-item span {
+		min-width: 195px;
+	}
+	.app {
+		margin: 0 auto;
+		max-width: 550px;
+	}
+
+	.list-group-item span {
+		min-width: 265px;
+	}
+	.add-form input {
+		width: 185px;
+	}
 }
 @media (max-width: 575px) {
+	.app {
+		//margin: 0 auto;
+		max-width: 340px;
+	}
+	.btn-group {
+		//display: block;
+		button {
+			//margin: 0 auto 10px auto;
+			//display: block;
+			//max-width: 90%;
+			font-size: 13px;
+		}
+	}
+	//.app-info {
+	//	font-size: 10px;
+	//}
+	.list-group-item span {
+		min-width: 115px;
+	}
+	.add-form {
+		display: block;
+		input {
+			margin: 0 auto;
+			width: 90%;
+			margin-bottom: 10px;
+		}
+		button {
+			margin: 0 auto;
+			width: 90%;
+			display: block;
+		}
+	}
+	.list-group-item {
+		span {
+			font-size: 17px;
+		}
+		input {
+			font-size: 17px;
+			max-width: 85px;
+		}
+		button {
+			width: 25px;
+			height: 25px;
+			line-height: 18px;
+			font-size: 12px;
+			.fas .fa-cookie {
+				//text-align: center;
+			}
+		}
+	}
+	.list-group-item .fa-star {
+		width: 12px;
+		height: 12px;
+		line-height: 12px;
+		font-size: 13px;
+	}
 }
