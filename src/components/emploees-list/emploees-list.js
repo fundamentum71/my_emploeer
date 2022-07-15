@@ -1,6 +1,7 @@
 import EmploeesListItem from '../emploees-list-item/emploees-list-item';
 
 import './emploees-list.scss';
+import '../media.scss';
 
 const EmploeesList = ({ data, onDelete, onToggleProp }) => {
 	const elements = data.map((item) => {

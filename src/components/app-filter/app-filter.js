@@ -1,4 +1,5 @@
 import './app-filter.scss';
+import '../media.scss';
 
 const AppFilter = (props) => {
 	const buttonsData = [

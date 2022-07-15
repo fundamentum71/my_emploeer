@@ -1,4 +1,5 @@
 import './app-info.scss';
+import '../media.scss';
 
 const AppInfo = ({ emploees, increased }) => {
 	return (

@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './emploees-add-form.scss';
+import '../media.scss';
 
 class EmploeesAddForm extends Component {
 	constructor(props) {
